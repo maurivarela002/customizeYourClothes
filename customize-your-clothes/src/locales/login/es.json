@@ -1,0 +1,21 @@
+{
+  "login": {
+    "signUp": {
+      "title": "Registro",
+      "personalInfo": "Información personal",
+      "firstName": "Nombre",
+      "signUpButton": "Registrarse",
+      "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+      "signIn": "Iniciar sesión"
+    },
+    "signIn": {
+      "title": "Iniciar sesión",
+      "emailLabel": "Correo electrónico",
+      "passwordLabel": "Contraseña",
+      "loginButton": "Entrar",
+      "forgotPassword": "¿Olvidaste tu contraseña?",
+      "noAccount": "¿No tienes una cuenta?",
+      "signUp": "Regístrate"
+    }
+  }
+}
