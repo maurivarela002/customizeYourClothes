@@ -1,8 +1,19 @@
 <template>
-  <v-card v-if="!showSignUp" class="mx-auto pa-10 pb-0" elevation="8" max-width="448" rounded="lg" color="var(--color-neutral-100)">
-    <h2 class="text-h5 font-weight-bold mb-6" style="color: var(--color-primary);">Desbloquea tu estudio creativo</h2>
+  <v-card 
+    v-if="!showSignUp" 
+    class="mx-auto pa-10 pb-0" 
+    elevation="8" 
+    max-width="448" 
+    rounded="lg" 
+    color="neutral-100"
+  >
+    <h2 class="text-h5 font-weight-bold mb-6 text-primary">
+      Desbloquea tu estudio creativo
+    </h2>
 
-    <div class="text-subtitle-1 text-medium-emphasis mb-2">Nombre de usuario</div>
+    <div class="text-subtitle-1 text-medium-emphasis mb-2">
+      Nombre de usuario
+    </div>
 
     <v-text-field
       density="compact"
@@ -36,12 +47,15 @@
       </v-card-text>
     </v-card>
 
-    <v-btn class="mb-6" color="var(--color-primary)" size="large" block @click="handleSubmit">
+    <v-btn class="mb-6" color="primary" size="large" block @click="handleSubmit">
       Entrar al taller de diseño
     </v-btn>
 
     <v-card-text class="text-center">
-      <a class="text-decoration-none" style="color: var(--color-accent-2);" @click="showSignUp = true">
+      <a 
+        class="text-decoration-none text-accent-2" 
+        @click="showSignUp = true"
+      >
         ¿Listo para plasmar tu visión? ¡Crea tu cuenta de diseñador ahora!
       </a>
     </v-card-text>
@@ -52,30 +66,30 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import { useRouter } from 'vue-router';
 import SignUp from '@/modules/login/components/SignUp.vue';
 
+const router = useRouter();
 const visible = ref(false);
 const showSignUp = ref(false);
 const repeatLogin = ref(0);
 
 const handleSubmit = () => {
   repeatLogin.value++;
+  router.push('/workspace/home');
 };
 </script>
 
 <style scoped>
-.v-text-field ::v-deep .v-field__outline__start,
-.v-text-field ::v-deep .v-field__outline__end {
+.v-text-field :deep(.v-field__outline__start),
+.v-text-field :deep(.v-field__outline__end) {
   border-color: var(--color-neutral-400) !important;
 }
 
-.v-text-field ::v-deep .v-field__outline__start:hover,
-.v-text-field ::v-deep .v-field__outline__end:hover {
-  border-color: var(--color-primary) !important;
-}
-
-.v-text-field ::v-deep .v-field--focused .v-field__outline__start,
-.v-text-field ::v-deep .v-field--focused .v-field__outline__end {
+.v-text-field :deep(.v-field__outline__start:hover),
+.v-text-field :deep(.v-field__outline__end:hover),
+.v-text-field :deep(.v-field--focused .v-field__outline__start),
+.v-text-field :deep(.v-field--focused .v-field__outline__end) {
   border-color: var(--color-primary) !important;
 }
 </style>

@@ -49,7 +49,6 @@ const signOff = async () => {
 .contents {
     background-color: var(--Gray-100);
     height: calc(100vh - 29px);
-    padding-left: 60px;
 }
 
 .dashboard-menu {

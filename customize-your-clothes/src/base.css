@@ -1,4 +1,12 @@
 :root {
+   /* Colores base */
+   --color-background: #f5f5f5;
+   --color-surface: #ffffff;
+   --color-primary: #1867c0;
+   --color-secondary: #5CBBF6;
+   --color-border: #e0e0e0;
+   --color-border-hover: #bdbdbd;
+   
   /* Colores principales */
   --color-primary: #3a5a40;     /* Verde oscuro, elegante */
   --color-secondary: #a3b18a;   /* Verde sage, suave */
@@ -11,6 +19,7 @@
   --color-neutral-500: #8a817c; /* Gris medio */
   --color-neutral-600: #463f3a; /* Gris oscuro */
   --color-neutral-700: #1a1a1a; /* Casi negro */
+  --color-neutral-800: #9d8171; /* Casi negro */
 
   /* Acentos */
   --color-accent-1: #e76f51;    /* Terracota */
@@ -57,6 +66,33 @@
   --border-radius-md: 0.375rem;
   --border-radius-lg: 0.5rem;
   --border-radius-full: 9999px;
+}
+
+/* Estilos base para scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
 }
 
 *,

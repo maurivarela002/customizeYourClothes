@@ -6,7 +6,7 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
         name: 'Login',
-        beforeEnter: [isNotAuthenticated],
+        // beforeEnter: [isNotAuthenticated],
         component: () => import(/* webpackChunkName: "Login"*/ '@/modules/login/views/Login.vue'),
     },
     {
@@ -14,8 +14,8 @@ const routes: Array<RouteRecordRaw> = [
         redirect: '/login'
     },
     {
-        path: '/workspace',
-        beforeEnter: [isAuthenticated],
+        path: '/',
+        // beforeEnter: [isAuthenticated],
         ...workspaceRouter
     }
 ]
